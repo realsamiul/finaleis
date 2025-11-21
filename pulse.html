@@ -4,53 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M0NARQ Pulse | Predictive Maintenance</title>
-    <link rel="stylesheet" crossorigin href="/entry-client-6e158fa6.css">
+    <link rel="stylesheet" href="entry-client-6e158fa6.css">
+    <link rel="icon" href="preloader-logo.svg">
     <style>
+        :root { --bg-navy: #0E1B2B; --teal: #009CA6; --orange: #FF6B1C; --glass: rgba(255, 255, 255, 0.05); }
+        body { background-color: var(--bg-navy); color: #F7F9FA; font-family: 'Sohne', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .text-teal { color: var(--teal); }
+        .border-glass { border: 1px solid rgba(255,255,255,0.1); }
+        .bg-glass { background: var(--glass); }
+        
         .monitor-screen { background: #000; color: #0f0; font-family: 'JetBrains Mono', monospace; border: 1px solid #333; padding: 30px; box-shadow: 0 0 30px rgba(0,255,0,0.05); }
         .blink { animation: blinker 1s linear infinite; color: #FF6B1C; }
         @keyframes blinker { 50% { opacity: 0; } }
-        .accordion-item[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-[#0E1B2B] text-white font-primary antialiased selection:bg-[#009CA6] selection:text-white">
+<body class="bg-[#0E1B2B] text-white antialiased">
     <div id="app">
-        <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference border-b border-white/10">
-            <div class="container mx-auto px-5 h-20 flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-secondary font-bold uppercase tracking-tighter">M0NARQ</a>
-                <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
-                    <a href="index.html" class="hover:text-[#009CA6] transition-colors">Home</a>
-                    <a href="vision.html" class="hover:text-[#009CA6] transition-colors">Vision</a>
-                    <a href="powerguard.html" class="hover:text-[#009CA6] transition-colors">PowerGuard</a>
+        <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference border-b border-white/10 bg-[#0E1B2B]/80 backdrop-blur-md">
+            <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="index.html" class="block w-32"><img src="logo-white.svg" alt="M0NARQ"></a>
+                <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-white/80">
+                    <a href="index.html" class="hover:text-[#009CA6]">Home</a>
+                    <a href="vision.html" class="hover:text-[#009CA6]">Vision</a>
+                    <a href="powerguard.html" class="hover:text-[#009CA6]">PowerGuard</a>
                 </nav>
-                <a href="#contact" class="px-6 py-2 border border-white/20 rounded-full text-xs uppercase hover:bg-white hover:text-black transition-all">Contact Sales</a>
+                <a href="#contact" class="px-6 py-2 border border-white/20 rounded-full text-xs uppercase hover:bg-white hover:text-black transition-all font-bold">Contact Sales</a>
             </div>
         </header>
 
         <main data-scroll-container>
-            <section class="section-padding pt-[20vh] pb-20" data-scroll-section>
-                <div class="container mx-auto px-5">
-                    <span class="text-[#009CA6] text-xs uppercase tracking-widest mb-4 block">M0NARQ Pulse</span>
-                    <h1 class="font-secondary text-6xl md:text-8xl mb-6 leading-none tracking-tighter">Zero Unplanned <br>Downtime.</h1>
-                    <p class="text-lg text-white/60 leading-relaxed max-w-xl">
-                        Fix it <em>before</em> it breaks. We listen to the heartbeat of your machines to predict failure days in advance.
-                    </p>
+            <section class="min-h-screen flex items-center pt-20" data-scroll-section>
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl">
+                        <span class="text-[#009CA6] text-xs font-bold uppercase tracking-[0.2em] mb-6 block">M0NARQ Pulse</span>
+                        <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-none tracking-tighter">Zero Unplanned <br>Downtime.</h1>
+                        <p class="text-xl text-white/60 leading-relaxed border-l-2 border-[#009CA6] pl-6">
+                            Fix it <em>before</em> it breaks. We listen to the heartbeat of your machines to predict failure days in advance using acoustic fingerprinting.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <section class="section-padding py-20" data-scroll-section>
-                <div class="container mx-auto px-5">
+            <section class="py-24 bg-glass" data-scroll-section>
+                <div class="container mx-auto px-6">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <div>
-                            <h2 class="font-secondary text-3xl mb-6">The $2 Billion Stop</h2>
+                            <h2 class="text-3xl font-bold mb-6">The $2 Billion Stop</h2>
                             <p class="text-white/60 leading-relaxed mb-10">
                                 Mechanical failure costs the Bangladesh RMG sector <strong>$2.04 Billion</strong> annually. The old way of "Run to Failure" is obsolete. M0NARQ Pulse uses "Condition-Based Maintenance" to alert you exactly when a bearing is 5 hours from failure.
                             </p>
-                            <div class="bg-white/5 p-8 rounded-lg border-l-4 border-[#009CA6]">
-                                <h3 class="font-bold text-[#009CA6] mb-4">Hardware Stack (< $30/machine)</h3>
-                                <ul class="space-y-3 text-sm">
+                            <div class="bg-[#050A10] p-8 rounded-lg border-l-4 border-[#009CA6]">
+                                <h3 class="font-bold text-[#009CA6] mb-6 uppercase tracking-widest text-sm">Hardware Stack (< $30/machine)</h3>
+                                <ul class="space-y-4 text-sm font-mono text-white/80">
                                     <li class="flex justify-between border-b border-white/10 pb-2">
-                                        <span>Sensor</span> <span class="text-white/50">MPU-6050 Accelerometer</span>
+                                        <span>Sensor</span> <span class="text-white/50">MPU-6050 Accelerometer (3-axis)</span>
                                     </li>
                                     <li class="flex justify-between border-b border-white/10 pb-2">
                                         <span>Processor</span> <span class="text-white/50">Raspberry Pi Zero 2 W</span>
@@ -64,19 +75,19 @@
                         <div>
                             <div class="monitor-screen rounded-xl">
                                 <div class="text-xs mb-6 opacity-50">> SYSTEM: M0NARQ PULSE v1.2</div>
-                                <div class="mb-2">> TARGET: SEWING-LINE-A-05</div>
-                                <div class="mb-6">> STATUS: <span class="blink">MAINTENANCE WARNING</span></div>
+                                <div class="mb-2 text-sm">> TARGET: SEWING-LINE-A-05</div>
+                                <div class="mb-6 text-sm">> STATUS: <span class="blink">MAINTENANCE WARNING</span></div>
                                 
-                                <div class="border-b border-white/20 pb-2 mb-4 text-xs text-white/50">[DIAGNOSTICS]</div>
-                                <div class="flex justify-between mb-1"><span>Vib RMS:</span> <span>3.82 (High)</span></div>
-                                <div class="flex justify-between mb-1"><span>Temp:</span> <span>65°C</span></div>
-                                <div class="flex justify-between mb-6"><span>Anomaly:</span> <span>Inner Race Bearing</span></div>
+                                <div class="border-b border-white/20 pb-2 mb-4 text-xs text-white/50 uppercase tracking-widest">[DIAGNOSTICS]</div>
+                                <div class="flex justify-between mb-2 text-sm"><span>Vib RMS:</span> <span>3.82 (High)</span></div>
+                                <div class="flex justify-between mb-2 text-sm"><span>Temp:</span> <span>65°C</span></div>
+                                <div class="flex justify-between mb-6 text-sm"><span>Anomaly:</span> <span>Inner Race Bearing Wear</span></div>
                                 
-                                <div class="border-b border-white/20 pb-2 mb-4 text-xs text-white/50">[PREDICTION]</div>
-                                <div class="flex justify-between mb-1"><span>RUL:</span> <span class="text-[#FF6B1C]">5.9 HOURS</span></div>
-                                <div class="flex justify-between mb-6"><span>Fail Prob:</span> <span>85%</span></div>
+                                <div class="border-b border-white/20 pb-2 mb-4 text-xs text-white/50 uppercase tracking-widest">[PREDICTION]</div>
+                                <div class="flex justify-between mb-2 text-sm"><span>RUL (Remaining Life):</span> <span class="text-[#FF6B1C]">5.9 HOURS</span></div>
+                                <div class="flex justify-between mb-6 text-sm"><span>Fail Prob (24h):</span> <span>85%</span></div>
                                 
-                                <div class="mt-6 pt-4 border-t border-white/20 text-[#009CA6]">
+                                <div class="mt-6 pt-4 border-t border-white/20 text-[#009CA6] font-bold text-sm">
                                     > REC: ORDER PART SKF-6205
                                 </div>
                             </div>
@@ -85,37 +96,47 @@
                 </div>
             </section>
 
-            <section class="section-padding py-20" data-scroll-section>
-                <div class="container mx-auto px-5 max-w-4xl">
-                    <h2 class="font-secondary text-3xl mb-10">Specs & Details</h2>
+            <section class="py-24" data-scroll-section>
+                <div class="container mx-auto px-6 max-w-4xl">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Deep Dive Specs</h2>
+                    
                     <div class="space-y-4">
-                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                        <details class="bg-glass border-glass rounded-lg group">
                             <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                                <span class="font-bold text-lg">Accuracy & Lead Time</span>
-                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                                <span class="font-bold text-lg">How accurate is the prediction?</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
                             </summary>
                             <div class="p-6 pt-0 text-white/60 leading-relaxed">
-                                In our Narayanganj pilot, M0NARQ Pulse correctly predicted spindle failures with a mean lead time of <strong>2.7 hours</strong>, allowing maintenance teams to swap parts during lunch breaks.
+                                In our Narayanganj pilot, M0NARQ Pulse correctly predicted spindle failures with a mean lead time of <strong>2.7 hours</strong>, allowing maintenance teams to swap parts during lunch breaks. This reduced monthly downtime from 23 hours to just 9 hours.
                             </div>
                         </details>
-                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                        <details class="bg-glass border-glass rounded-lg group">
                             <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                                <span class="font-bold text-lg">NASA Technology?</span>
-                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                                <span class="font-bold text-lg">NASA Technology in a Textile Mill?</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
                             </summary>
                             <div class="p-6 pt-0 text-white/60 leading-relaxed">
-                                We use Transfer Learning. Our core model was pre-trained on the <strong>NASA CMAPSS dataset</strong> (Turbofan Engine Degradation). The physics of rotating machinery are universal—whether it's a jet engine or a sewing motor.
+                                We use Transfer Learning. Our core model was pre-trained on the <strong>NASA CMAPSS dataset</strong> (Turbofan Engine Degradation). The physics of rotating machinery are universal—whether it's a jet engine or a sewing motor—we simply adapt the domain weights.
+                            </div>
+                        </details>
+                        <details class="bg-glass border-glass rounded-lg group">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                                <span class="font-bold text-lg">Pi-Transformer & Physics-Aware AI</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
+                            </summary>
+                            <div class="p-6 pt-0 text-white/60 leading-relaxed">
+                                For enterprise deployments, we use a <strong>Pi-Transformer</strong> head on top of the GRU. This "Physics-Informed" layer incorporates domain knowledge (e.g., the physics of bearing degradation), improving F1 scores by 0.03 compared to standard models.
                             </div>
                         </details>
                     </div>
                 </div>
             </section>
 
-            <footer class="py-20 border-t border-white/10 text-center text-white/40 text-sm" data-scroll-section>
-                &copy; 2025 M0NARQ Technologies.
+            <footer class="py-20 border-t border-white/10 text-center text-white/40 text-xs uppercase tracking-widest font-mono" data-scroll-section>
+                &copy; 2025 M0NARQ Technologies Ltd.
             </footer>
         </main>
     </div>
-    <script type="module" src="/entry-client-9303cc06.js"></script>
+    <script type="module" src="entry-client-9303cc06.js"></script>
 </body>
 </html>
