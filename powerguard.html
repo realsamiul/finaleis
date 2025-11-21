@@ -4,85 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M0NARQ PowerGuard | Energy Intelligence</title>
-    <link rel="stylesheet" crossorigin href="/entry-client-6e158fa6.css">
+    <link rel="stylesheet" href="entry-client-6e158fa6.css">
+    <link rel="icon" href="preloader-logo.svg">
     <style>
-        .code-block { background: #050a10; border: 1px solid rgba(255,255,255,0.1); padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #A5B3CE; overflow-x: auto; }
-        .accordion-item[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+        :root { --bg-navy: #0E1B2B; --teal: #009CA6; --orange: #FF6B1C; --glass: rgba(255, 255, 255, 0.05); }
+        body { background-color: var(--bg-navy); color: #F7F9FA; font-family: 'Sohne', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .text-teal { color: var(--teal); }
+        .border-glass { border: 1px solid rgba(255,255,255,0.1); }
+        .bg-glass { background: var(--glass); }
+        
+        /* Code Snippet */
+        .code-block { background: #050a10; border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #A5B3CE; overflow-x: auto; }
+        .key { color: #c678dd; } .str { color: #98c379; } .num { color: #d19a66; }
+        
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-[#0E1B2B] text-white font-primary antialiased selection:bg-[#009CA6] selection:text-white">
+<body class="bg-[#0E1B2B] text-white antialiased">
     <div id="app">
-        <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference border-b border-white/10">
-            <div class="container mx-auto px-5 h-20 flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-secondary font-bold uppercase tracking-tighter">M0NARQ</a>
-                <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
-                    <a href="index.html" class="hover:text-[#009CA6] transition-colors">Home</a>
-                    <a href="vision.html" class="hover:text-[#009CA6] transition-colors">Vision</a>
-                    <a href="pulse.html" class="hover:text-[#009CA6] transition-colors">Pulse</a>
+        <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference border-b border-white/10 bg-[#0E1B2B]/80 backdrop-blur-md">
+            <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="index.html" class="block w-32"><img src="logo-white.svg" alt="M0NARQ"></a>
+                <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-white/80">
+                    <a href="index.html" class="hover:text-[#009CA6]">Home</a>
+                    <a href="vision.html" class="hover:text-[#009CA6]">Vision</a>
+                    <a href="pulse.html" class="hover:text-[#009CA6]">Pulse</a>
                 </nav>
-                <a href="#audit" class="px-6 py-2 bg-[#009CA6] text-white rounded-full text-xs uppercase hover:bg-white hover:text-[#009CA6] transition-all font-bold">Start Audit</a>
+                <a href="#audit" class="px-6 py-2 bg-[#009CA6] text-white rounded-full text-xs uppercase hover:bg-white hover:text-[#009CA6] transition-all font-bold">Start Energy Audit</a>
             </div>
         </header>
 
         <main data-scroll-container>
             
-            <section class="section-padding pt-[20vh] pb-20" data-scroll-section>
-                <div class="container mx-auto px-5">
-                    <span class="text-[#009CA6] text-xs uppercase tracking-widest mb-4 block">M0NARQ PowerGuard</span>
-                    <h1 class="font-secondary text-6xl md:text-7xl mb-6 leading-tight">Energy is <br>Currency.</h1>
-                    <p class="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
-                        Turn energy compliance into a competitive advantage. The "ECG" for your factory's power consumption.
-                    </p>
+            <section class="min-h-screen flex items-center pt-20" data-scroll-section>
+                <div class="container mx-auto px-6">
+                    <div class="max-w-3xl">
+                        <span class="text-[#009CA6] text-xs font-bold uppercase tracking-[0.2em] mb-6 block">M0NARQ PowerGuard</span>
+                        <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-[0.9] tracking-tighter">Energy is <br>Currency.</h1>
+                        <p class="text-xl text-white/60 leading-relaxed mb-10 border-l-2 border-[#009CA6] pl-6">
+                            Turn energy compliance into a competitive advantage. The "ECG" for your factory's power consumption. Digitizing consumption at the machine level.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <section class="section-padding py-20" data-scroll-section>
-                <div class="container mx-auto px-5">
+            <section class="py-24 bg-glass" data-scroll-section>
+                <div class="container mx-auto px-6">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         <div>
-                            <h2 class="font-secondary text-3xl mb-6">The Critical Problem</h2>
+                            <h2 class="text-3xl font-bold mb-6">The Critical Problem</h2>
                             <p class="text-white/60 leading-relaxed mb-6">
                                 In the face of LNG shortages, unmonitored energy consumption causes a <strong>12-15% overspend</strong>, costing the sector <strong>$281 Million/year</strong>.
                             </p>
                             <p class="text-white/60 leading-relaxed mb-10">
-                                <strong>The Compliance Cliff:</strong> By 2026, the EU's CBAM will require auditable energy logs for every garment. Handwritten logs will no longer suffice.
+                                <strong>The Compliance Cliff:</strong> By 2026, the EU's <strong>CBAM (Carbon Border Adjustment Mechanism)</strong> will require auditable energy logs for every garment. Handwritten logs will no longer suffice.
                             </p>
                             
-                            <div class="bg-white/5 border border-white/10 p-8 rounded-lg">
-                                <h3 class="text-[#009CA6] font-bold mb-4">Hardware Stack (< $35/point)</h3>
-                                <ul class="space-y-3 text-sm text-white/80">
-                                    <li class="flex justify-between"><span>Sensor</span> <span class="text-white/40">PZEM-004T v3 (Non-invasive CT)</span></li>
-                                    <li class="flex justify-between"><span>Processor</span> <span class="text-white/40">ESP32 Microcontroller</span></li>
-                                    <li class="flex justify-between"><span>Install</span> <span class="text-white/40">Snap-on. No downtime.</span></li>
+                            <div class="bg-[#050A10] border border-white/10 p-8 rounded-lg">
+                                <h3 class="text-[#009CA6] font-bold mb-4 uppercase tracking-widest text-sm">Hardware Stack (< $35/point)</h3>
+                                <ul class="space-y-4 text-sm text-white/80 font-mono">
+                                    <li class="flex justify-between border-b border-white/10 pb-2">
+                                        <span>Sensor</span> <span class="text-white/40">PZEM-004T v3 (Non-invasive CT)</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-white/10 pb-2">
+                                        <span>Processor</span> <span class="text-white/40">ESP32 Microcontroller (Wi-Fi)</span>
+                                    </li>
+                                    <li class="flex justify-between pt-2">
+                                        <span>Install</span> <span class="text-white/40">Snap-on. No downtime.</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div>
-                            <div class="border border-white/20 rounded-xl overflow-hidden">
+                            <div class="border border-white/20 rounded-xl overflow-hidden shadow-2xl">
                                 <div class="bg-black p-4 border-b border-white/10 flex justify-between items-center">
                                     <span class="text-xs font-mono text-[#FF6B1C]">● LIVE SIMULATION: DYEING UNIT 2</span>
                                 </div>
                                 <div class="code-block">
 {
-  <span class="json-key">"status"</span>: <span class="json-str">"surge_warning"</span>,
-  <span class="json-key">"timestamp"</span>: <span class="json-str">"2025-11-21T18:30:05Z"</span>,
-  <span class="json-key">"grid_status"</span>: <span class="json-str">"PEAK_TARIFF"</span>,
-  <span class="json-key">"forecast"</span>: {
-    <span class="json-key">"prediction_window"</span>: <span class="json-str">"180s"</span>,
-    <span class="json-key">"predicted_load"</span>: <span class="json-str">"58.2 kW"</span>,
-    <span class="json-key">"spike_prob"</span>: <span class="json-num">0.89</span>
+  <span class="key">"status"</span>: <span class="str">"surge_warning"</span>,
+  <span class="key">"timestamp"</span>: <span class="str">"2025-11-21T18:30:05Z"</span>,
+  <span class="key">"grid_status"</span>: <span class="str">"PEAK_TARIFF"</span>,
+  <span class="key">"metrics"</span>: {
+    <span class="key">"current_load"</span>: <span class="str">"45.6 kW"</span>,
+    <span class="key">"power_factor"</span>: <span class="num">0.78</span>
   },
-  <span class="json-key">"financials"</span>: {
-    <span class="json-key">"rate"</span>: <span class="json-str">"$0.12/kWh"</span>,
-    <span class="json-key">"est_penalty"</span>: <span class="json-str">"$450.00"</span>,
-    <span class="json-key">"action"</span>: <span class="json-str">"SHED_LOAD: Aux Fans"</span>
+  <span class="key">"forecast"</span>: {
+    <span class="key">"prediction_window"</span>: <span class="str">"180s"</span>,
+    <span class="key">"predicted_load"</span>: <span class="str">"58.2 kW"</span>,
+    <span class="key">"spike_prob"</span>: <span class="num">0.89</span>
+  },
+  <span class="key">"financials"</span>: {
+    <span class="key">"rate"</span>: <span class="str">"$0.12/kWh"</span>,
+    <span class="key">"est_penalty"</span>: <span class="str">"$450.00"</span>,
+    <span class="key">"action"</span>: <span class="str">"SHED_LOAD: Aux Fans"</span>
   }
 }
                                 </div>
-                                <div class="bg-[#1a202c] p-4 text-xs text-white/40 text-center">
-                                    *Detects anomalies 3 minutes before spike.
+                                <div class="bg-[#1a202c] p-4 text-xs text-white/40 text-center font-mono">
+                                    *Detects anomalies 3 minutes before spike via TCN forecasting.
                                 </div>
                             </div>
                         </div>
@@ -90,46 +113,46 @@
                 </div>
             </section>
 
-            <section class="section-padding py-20" data-scroll-section>
-                <div class="container mx-auto px-5 max-w-4xl">
-                    <h2 class="font-secondary text-3xl mb-10">Technical Capabilities</h2>
+            <section class="py-24" data-scroll-section>
+                <div class="container mx-auto px-6 max-w-4xl">
+                    <h2 class="text-4xl font-bold mb-12 text-center">Technical Capabilities</h2>
                     <div class="space-y-4">
-                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                        <details class="bg-glass border-glass rounded-lg group">
                             <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                                 <span class="font-bold text-lg">The "MOMEMTO" Patch & TS2Vec</span>
-                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
                             </summary>
                             <div class="p-6 pt-0 text-white/60 leading-relaxed">
-                                Standard AI models suffer from "Concept Drift". We use <strong>TS2Vec</strong> for vectorization with a <strong>MOMEMTO</strong> memory gate. This ensures the model remembers ideal baseline efficiency and flags deviations (like a worn motor) even months later.
+                                Standard AI models suffer from "Concept Drift"—they eventually learn that a wasteful machine is "normal." We use <strong>TS2Vec</strong> for vectorization with a <strong>MOMEMTO</strong> memory gate. This ensures the model remembers ideal baseline efficiency and flags deviations (like a worn motor) even months later, without retraining.
                             </div>
                         </details>
-                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                        <details class="bg-glass border-glass rounded-lg group">
                             <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                                 <span class="font-bold text-lg">CBAM & Green Certificates</span>
-                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
                             </summary>
                             <div class="p-6 pt-0 text-white/60 leading-relaxed">
-                                The EU's Carbon Border Adjustment Mechanism requires granular data. PowerGuard generates immutable <strong>Parquet files</strong>, digitally signed, to serve as "Green Certificates" for your buyers.
+                                The EU's Carbon Border Adjustment Mechanism requires granular data on energy intensity per unit of product. M0NARQ PowerGuard automates this data collection, generating immutable <strong>Parquet files</strong>, digitally signed, to serve as "Green Certificates" for your buyers.
                             </div>
                         </details>
-                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                        <details class="bg-glass border-glass rounded-lg group">
                             <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                                 <span class="font-bold text-lg">Grid vs. Generator ROI</span>
-                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                                <span class="text-[#009CA6] text-2xl transition-transform group-open:rotate-45">+</span>
                             </summary>
                             <div class="p-6 pt-0 text-white/60 leading-relaxed">
-                                Diesel power costs ~$0.32/kWh vs $0.12/kWh for grid power. By predicting spikes 180 seconds in advance, PowerGuard helps you shed non-essential load (like ACs) to stay within grid limits.
+                                Diesel power costs ~3x grid power ($0.32 vs $0.12). By predicting spikes 180 seconds in advance (using a Temporal Convolutional Network), PowerGuard helps you shed non-essential load (like ACs) to stay within your grid sanctions, preventing the need to fire up expensive backup generators.
                             </div>
                         </details>
                     </div>
                 </div>
             </section>
 
-            <footer class="py-20 border-t border-white/10 text-center text-white/40 text-sm" data-scroll-section>
-                &copy; 2025 M0NARQ Technologies.
+            <footer class="py-20 border-t border-white/10 text-center text-white/40 text-xs uppercase tracking-widest font-mono" data-scroll-section>
+                &copy; 2025 M0NARQ Technologies Ltd.
             </footer>
         </main>
     </div>
-    <script type="module" src="/entry-client-9303cc06.js"></script>
+    <script type="module" src="entry-client-9303cc06.js"></script>
 </body>
 </html>
