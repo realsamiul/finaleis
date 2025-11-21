@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M0NARQ Vision | Intelligent Quality Control</title>
+    <link rel="stylesheet" crossorigin href="/entry-client-6e158fa6.css">
+    <style>
+        .terminal-window { background: #050a10; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-family: 'JetBrains Mono', monospace; }
+        .accordion-item[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-[#0E1B2B] text-white font-primary antialiased selection:bg-[#009CA6] selection:text-white">
+    <div id="app">
+        <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference border-b border-white/10">
+            <div class="container mx-auto px-5 h-20 flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-secondary font-bold uppercase tracking-tighter">M0NARQ</a>
+                <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+                    <a href="index.html" class="hover:text-[#009CA6] transition-colors">Home</a>
+                    <a href="powerguard.html" class="hover:text-[#009CA6] transition-colors">PowerGuard</a>
+                    <a href="pulse.html" class="hover:text-[#009CA6] transition-colors">Pulse</a>
+                </nav>
+                <a href="#deploy" class="px-6 py-2 bg-[#009CA6] text-white rounded-full text-xs uppercase hover:bg-white hover:text-[#009CA6] transition-all font-bold">Deploy Vision</a>
+            </div>
+        </header>
+
+        <main data-scroll-container>
+            
+            <section class="section-padding pt-[20vh] pb-20" data-scroll-section>
+                <div class="container mx-auto px-5">
+                    <div class="grid grid-cols-12 gap-10 items-center">
+                        <div class="col-span-12 lg:col-span-6">
+                            <span class="text-[#FF6B1C] text-xs uppercase tracking-widest mb-4 block">M0NARQ Vision</span>
+                            <h1 class="font-secondary text-6xl md:text-7xl mb-6 leading-tight">Precision at <br>the Edge.</h1>
+                            <p class="text-lg text-white/60 leading-relaxed mb-10 max-w-md">
+                                Stop defects before they become claims. Military-grade detection running on the smartphones you already own.
+                            </p>
+                            <div class="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
+                                <div>
+                                    <div class="font-secondary text-3xl text-[#009CA6]">$390M</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Annual Loss</div>
+                                </div>
+                                <div>
+                                    <div class="font-secondary text-3xl text-[#009CA6]">47 Days</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">ROI Payback</div>
+                                </div>
+                                <div>
+                                    <div class="font-secondary text-3xl text-[#009CA6]">28ms</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Latency</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-12 lg:col-span-6">
+                            <div class="terminal-window p-8 bg-black border border-white/20 shadow-2xl">
+                                <div class="text-xs font-mono text-[#FF6B1C] border-b border-white/20 pb-2 mb-4">● LIVE DEMO: LINE 04</div>
+                                <div class="space-y-2 text-xs font-mono text-[#9DA7B3]">
+                                    <div>>> INIT MicroViT-Tiny-Q8... OK</div>
+                                    <div>>> CAM_01 STREAM: 1080p @ 30fps</div>
+                                    <br>
+                                    <div class="text-[#FF6B1C] font-bold">[ALERT] DEFECT DETECTED</div>
+                                    <div>TYPE: <span class="text-[#009CA6]">Needle Mark</span></div>
+                                    <div>CONF: <span class="text-[#009CA6]">89.4%</span></div>
+                                    <div>AREA: 0.45%</div>
+                                    <br>
+                                    <div class="inline-block bg-[#FF6B1C] text-black px-2 py-1 font-bold">ACTION: LINE STOP TRIGGERED</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding py-20 bg-white/5" data-scroll-section>
+                <div class="container mx-auto px-5">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div>
+                            <h3 class="font-secondary text-3xl mb-6 text-[#009CA6]">Hardware Stack (< $150)</h3>
+                            <p class="text-white/60 mb-8">We replace $12,000 AOI rigs with commodity hardware.</p>
+                            <ul class="space-y-6">
+                                <li class="border-b border-white/10 pb-4">
+                                    <span class="block text-xs uppercase text-[#FF6B1C] mb-1">Sensor</span>
+                                    <span class="text-lg">Android Smartphone or RPi 5 + USB Cam</span>
+                                </li>
+                                <li class="border-b border-white/10 pb-4">
+                                    <span class="block text-xs uppercase text-[#FF6B1C] mb-1">Mount</span>
+                                    <span class="text-lg">Basic tripod or 3D-printed rig ($20)</span>
+                                </li>
+                                <li class="border-b border-white/10 pb-4">
+                                    <span class="block text-xs uppercase text-[#FF6B1C] mb-1">Connectivity</span>
+                                    <span class="text-lg">Local Wi-Fi or LoRa for dead spots</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-secondary text-3xl mb-6 text-[#009CA6]">The "Vision Map" Process</h3>
+                            <div class="space-y-8">
+                                <div class="flex gap-6">
+                                    <div class="font-mono text-4xl text-white/20">01</div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">Capture</h4>
+                                        <p class="text-sm text-white/60">Phone streams high-res video of moving fabric.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="font-mono text-4xl text-white/20">02</div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">Edge Inference</h4>
+                                        <p class="text-sm text-white/60">MicroViT model analyzes texture in real-time on-device.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="font-mono text-4xl text-white/20">03</div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">Action</h4>
+                                        <p class="text-sm text-white/60">"Stop Line" relay triggered via GPIO instantly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding py-20" data-scroll-section>
+                <div class="container mx-auto px-5 max-w-4xl">
+                    <h2 class="font-secondary text-4xl mb-12 text-center">Technical Deep Dive</h2>
+                    
+                    <div class="space-y-4">
+                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                                <span class="font-bold text-lg">Why MicroViT-Tiny-Q8 instead of YOLO?</span>
+                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                            </summary>
+                            <div class="p-6 pt-0 text-white/60 leading-relaxed">
+                                YOLO is optimized for object bounding boxes, but fabric defects are subtle textural anomalies. We use <strong>MicroViT-Tiny-Q8</strong> (9M params, int8 quantized) which uses "Self-Attention" to understand the context of the weave. It runs at 28ms on a Raspberry Pi CPU—3.6x faster than standard transformers.
+                            </div>
+                        </details>
+
+                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                                <span class="font-bold text-lg">PicoSAM-2 & Promptable Segmentation</span>
+                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                            </summary>
+                            <div class="p-6 pt-0 text-white/60 leading-relaxed">
+                                We use <strong>PicoSAM-2</strong> (1.3M params) for segmentation. This allows for "Human-in-the-Loop" training. A floor manager can tap a new type of defect on the tablet, and the model instantly "snaps" a mask to it, learning the new defect type without cloud retraining.
+                            </div>
+                        </details>
+
+                        <details class="accordion-item group border border-white/10 rounded-lg bg-white/5">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                                <span class="font-bold text-lg">Privacy: Federated Learning</span>
+                                <span class="text-[#009CA6] text-xl transition-transform group-open:rotate-45">+</span>
+                            </summary>
+                            <div class="p-6 pt-0 text-white/60 leading-relaxed">
+                                Your proprietary patterns never leave the factory. We use Federated Learning. Your device shares only mathematical gradients (weight updates) with the central network, not images.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="py-20 border-t border-white/10 text-center text-white/40 text-sm" data-scroll-section>
+                &copy; 2025 M0NARQ Technologies.
+            </footer>
+        </main>
+    </div>
+    <script type="module" src="/entry-client-9303cc06.js"></script>
+</body>
+</html>
